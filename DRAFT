@@ -1,0 +1,162 @@
+//  function Home() {
+//     return (
+//       <div className="Home">
+  
+  
+//       </div>
+//     );
+//   }
+  
+//   export default Home;
+
+
+
+
+// CheckoutProduct.js
+//   import React from "react";
+// import "./CheckoutProduct.css";
+// import { products } from "./data/data"; // Import products from data file
+
+// function CheckoutProduct() {
+//   return (
+//     <div className="checkoutProduct">
+//           {products.map((product, index) => (
+//             <div key={index} className="product_info">
+//             {/* <img src={product.image} alt={product.title} /> */}
+//             <p className="checkoutProduct_title">{product.title}</p>
+//             <p className="checkoutProduct_price">{product.price}</p>
+//             <div className="checkoutProduct_rating">⭐⭐⭐⭐⭐</div>
+//             <button className="button">Remove from basket</button>
+//           </div>
+//         ))}
+//      </div>
+//   );
+// }
+
+// export default CheckoutProduct;
+
+
+
+
+
+//header.js 
+// import React from "react";
+// import "./Header.css";
+// import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
+// import EmojiNatureIcon from "@mui/icons-material/EmojiNature";
+// import SearchIcon from "@mui/icons-material/Search";
+// import { Link } from "react-router-dom";
+
+// function Header() {
+//   return (
+//     <div className="header">
+//       <Link className="link" to="/">
+//         <div className="header_logo">
+//           <EmojiNatureIcon className="header_logoImage" fontSize="large" />
+//           <h2>Cozy Crochet Corner</h2>
+//         </div>
+//       </Link>
+//       <div className="header_search">
+//         <input type="text" className="header_searchInput" />
+//         <SearchIcon className="header_searchIcon" />
+//       </div>
+
+//       <div className="header_nav">
+//         <div className="nav_item">
+//           <span className="nav_itemLineOne">Hello guest</span>
+//           <span className="nav_itemLineTwo">sign in</span>
+//         </div>
+//         <div className="nav_item">
+//           <span className="nav_itemLineOne">Your</span>
+//           <span className="nav_itemLineTwo">shop</span>
+//         </div>
+//         <Link className="link" to="/checkout">
+//           <div className="nav_itemBasket">
+//             <ShoppingBasketIcon />
+//             <span className="nav_itemLineTwo nav_basketCount">0</span>
+//           </div>
+//         </Link>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default Header;
+
+
+
+//product.js 
+
+// import { useStateValue } from "react";
+// import "./Product.css";
+// import products from "./data/data";
+
+
+// function Product() {
+// // const [state, dispatch] = useStateValue()
+// // const addToBasket = (product) =>{
+// //   dispatch({
+// //     type:"ADD_TO_BASKET",
+// //     item:{
+// //       title: product.title,
+// //       price: product.price,
+// //       rating: product.rating,
+// //       image: product.image,
+// //     },
+// //   });
+// // };
+// console.log(products, "product");
+// return (
+//   <div className="product">
+     
+//       {products.map((product, index) => (
+//         <div key={index} className="product_info">
+//           <p>title</p>
+//           <p className="product_price">10$</p>
+//           <div className="product_rating">⭐⭐⭐⭐⭐</div>
+//           {/* <img src={product.image} alt={product.title} /> */}
+//           <button 
+//           // onClick={addToBasket} 
+//           className="button">Add to basket</button>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }
+
+// export default Product;
+
+
+
+//reducer.js 
+// export const initialState = {
+//   basket:[],
+// }
+
+// const reducer = (state, action) =>{
+// switch(action.type){
+//   case "ADD_TO_BASKET":
+//   return{
+//       ...state,
+//       basket: [...state.basket, action.item],
+//   }
+//   default:
+//       return state
+// }
+// }
+
+// export default reducer;
+
+
+//stateprovider.js
+// import React, {createContext, useContext,useReducer} from "react";
+
+// export const StateContext = createContext()
+
+// export const StateProvider = ({reducer, initialState, children}) =>{
+//     <StateContext.Provider value = {useReducer(reducer, initialState)}>
+//         {children}
+//     </StateContext.Provider>
+// };
+
+// export const useStateValue = () => useContext(StateContext)

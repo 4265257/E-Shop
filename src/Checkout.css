@@ -1,0 +1,59 @@
+  .checkout {
+    display: flex;
+    padding: 20px;
+    height: max-content;
+}
+
+.checkout_ad {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.checkout_title {
+    margin-right: 10px;
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.checkout_left {
+    display: flex;
+    flex-direction: column;
+}
+.checkout_right {
+  display: flex;
+  flex-direction: column;
+  background-color: lightgray;
+  padding: 20px;
+  border-radius: 5px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.subtotal_title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.subtotal_items {
+  margin-bottom: 20px;
+}
+
+.subtotal_total {
+  font-weight: bold;
+}
+
+.subtotal_button,
+.home_button
+{
+  background-color: #5f180c; 
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.subtotal_button:hover {
+  background-color: #7a2417;
+}
